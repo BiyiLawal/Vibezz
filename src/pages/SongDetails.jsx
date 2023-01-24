@@ -51,13 +51,13 @@ const SongDetails = () => {
           )}
         </div>
       </div>
-      <RelatedSongs
+      { isFetchingRelatedSong ? <Loader /> : <RelatedSongs
         data={relatedData}
         isPlaying={isPlaying}
         activeSong={activeSong}
         handlePauseSelect={handlePauseSelect}
         handlePlaySelect={handlePlaySelect}
-      />
+      />}
     </div>
   );
 };

@@ -16,7 +16,7 @@ export const shazamCoreApi = createApi({
         getNaijaChart: builder.query({query:({NG})=>`v1/charts/country?country_code=${NG}`}),
         getSongsByCountry: builder.query({ query: (countryCode) => `v1/charts/country?country_code=${countryCode}` }),
         getSongsBySearch: builder.query({ query: (searchTerm) => `v1/search/multi?search_type=SONGS_ARTISTS&query=${searchTerm}` }),
-        // getRelatedSong: builder.query({query:({detailId})=>`v1/tracks/related?track_id?=${detailId}`}),
+        getRelatedSong: builder.query({query:({detailId})=>`v1/tracks/related?track_id?=${detailId}`}),
         getArtistDetails: builder.query({ query: (artistId) => `v2/artists/details?artist_id=${artistId}` }),
     }),
 });
